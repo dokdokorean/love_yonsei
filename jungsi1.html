@@ -11,9 +11,9 @@
         #jungsi1_2{position: absolute; top: 540px;left: 0px; width: 750px; height: auto;}
         #rec_main{position: absolute; left: 50%; top:0px;transform: translate(-50%); width: 750px; height: 750px; background-color: #fff;}
         #name{position: absolute; top: 163px; left: 170px; width: 290px; height: 30px; border: 1px solid #d0d0d0;}
-        #admission{position: absolute; top: 213px; left: 170px; width: 295px; height: 35px; border: 1px solid #d0d0d0;}
+        #admission{position: absolute; top: 213px; left: 170px; width: 295px; height: 35px; border-radius:0px; border: 1px solid #d0d0d0;}
         #birth{position: absolute; top: 265px; left: 170px; width: 290px; height: 30px; border: 1px solid #d0d0d0;}
-        #dpt{position: absolute; top: 317px; left: 170px; width: 295px; height: 35px; border: 1px solid #d0d0d0;}
+        #dpt{position: absolute; top: 317px; left: 170px; width: 295px; height: 35px; border-radius:0px; border: 1px solid #d0d0d0;}
         #btn{position: absolute; top: 430px; left: 250px; width: 230px; height: 45px; border: none; background-color: #00205B; color: #fff;}
     </style>
 </head>
@@ -144,7 +144,7 @@
     </div>
     <script>
         function sendvalue(){
-            if(document.getElementById('name').value!='' && document.getElementById('dpt_1')!='' && document.getElementById('ad_1')!='' && document.getElementById('birth').value!='')
+            if(document.getElementById('name').value!='' && document.getElementById('dpt_1')!='' && document.getElementById('ad_1')!='' && document.getElementById('birth').value!='' && document.getElementById('birth').value.length==6)
             {
                 localStorage.setItem('name_2',document.getElementById('name').value);
         localStorage.setItem('num_2',Math.floor((Math.random()*(999999999-1)+1)));
