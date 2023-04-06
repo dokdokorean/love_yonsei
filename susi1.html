@@ -152,7 +152,7 @@
     </div>
     <script>
         function sendvalue(){
-            if(document.getElementById('name').value!='' && document.getElementById('dpt_1')!='' && document.getElementById('ad_1')!='' && document.getElementById('birth').value!='')
+            if(document.getElementById('name').value!='' && document.getElementById('dpt_1')!='' && document.getElementById('ad_1')!='' && document.getElementById('birth').value!=''  && document.getElementById('birth').value.length==6)
             {
                 localStorage.setItem('name_1',document.getElementById('name').value);
         localStorage.setItem('num_1',Math.floor((Math.random()*(999999999-1)+1)));
