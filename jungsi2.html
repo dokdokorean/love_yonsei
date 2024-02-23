@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정시모집 합격자 조회</title>
+    <style>
+         body{background-color: #e4e4e4; }
+         #rec_main{position: absolute; left: 0px; top:0px; width: 750px; height: 100%; background-color: #fff;}
+         #susi2_1{position: absolute; top:-3px;left: 0px; width: 750px; height: auto;}
+         #susi2_2{position: absolute; top:630px;left: 0px; width: 750px; height: auto;}
+         #name2{position: absolute; top: 175px; left: 180px; font-size: 17px; color: blue;}
+         #dpt2{position: absolute; top: 228px; left: 180px; font-size: 15px;}
+         #ad2{position: absolute; top: 278px; left: 180px; font-size: 15px; }
+         #hap{position: absolute; top: 438px; left: 150px; font-size: 16px; color: #002072;}
+         #hap strong {color: red;}
+         #final{position: absolute; top: 1040px; left: 25px; background-color: #6A6A6A; border-radius: 8px; border: none; color: #fff;width: 130px; height: 30px;}
+
+         @media screen and (min-width: 650px){
+         body{background-color: #e4e4e4; }
+         #rec_main{position: absolute; left: 50%; top:0px;transform: translate(-50%); width: 750px; height: 100%; background-color: #fff;}
+         #susi2_1{position: absolute; top:-3px;left: 0px; width: 750px; height: auto;}
+         #susi2_2{position: absolute; top:630px;left: 0px; width: 750px; height: auto;}
+         #name2{position: absolute; top: 175px; left: 180px; font-size: 17px; color: blue;}
+         #dpt2{position: absolute; top: 228px; left: 180px; font-size: 15px;}
+         #ad2{position: absolute; top: 278px; left: 180px; font-size: 15px; }
+         #hap{position: absolute; top: 438px; left: 150px; font-size: 16px; color: #002072;}
+         #hap strong {color: red;}
+         #final{position: absolute; top: 1040px; left: 25px; background-color: #6A6A6A; border-radius: 8px; border: none; color: #fff;width: 130px; height: 30px;}}
+
+
+    </style>
+</head>
+<body>
+    <div id="rec_main">
+        <img id="susi2_1" src="jungsi2_1.png">
+        <img id="susi2_2" src="jungsi2_2.png">
+        <a id="name2"></a>
+        <a id="dpt2"></a>
+        <a id="ad2"></a>
+        <a id="hap">2024학년도 연세대학교 서울캠퍼스 정시모집에 <strong>최초합격</strong> 하였습니다.<a>
+        <button id="final" onclick="window.open('jungsi3.html')">합격확인서 출력</button>
+    </div>
+    <script>
+        window.onload=function(){
+            if(localStorage.getItem('num_2')){
+            var num = localStorage.getItem('num_2')}
+
+            if(localStorage.getItem('name_2')){
+            var name = localStorage.getItem('name_2')}
+            document.getElementById('name2').innerText=name+' / '+num
+
+            if(localStorage.getItem('dpt_2')){
+            var dpt = localStorage.getItem('dpt_2')}
+            document.getElementById('dpt2').innerText=dpt;
+
+            if(localStorage.getItem('ad_2')){
+            var ad = localStorage.getItem('ad_2')}
+            document.getElementById('ad2').innerText=ad;
+        }
+    </script>
+</body>
+</html>
